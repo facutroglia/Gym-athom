@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mensaje = document.getElementById('m-mensaje').value;
 
         // Número Athom Gym
-        const telefono = '5493513035537';
+        const telefono = '5493512848492';
 
         const texto = `¡Hola ATHOM GYM!%0A%0A` +
                       `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
