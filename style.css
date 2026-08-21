@@ -34,7 +34,7 @@ body {
 }
 
 /* ==========================================================================
-   HEADER SUPERIOR MÓVIL
+   HEADER SUPERIOR
    ========================================================================== */
 .desktop-nav {
     display: none; /* Oculto en celulares */
@@ -55,33 +55,7 @@ body {
 /* ==========================================================================
    ADAPTACIÓN PARA ESCRITORIO (PANTALLAS +768px)
    ========================================================================== */
-@media (min-width: 768px) {
-    
-    body {
-        padding-bottom: 0;
-    }
 
-    /* Oculta el nav flotante inferior en PC */
-    .bottom-nav {
-        display: none;
-    }
-
-    /* Muestra la lista de enlaces centrada en el Header */
-    .desktop-nav {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .mobile-header {
-        height: 80px;
-        padding: 0 50px;
-    }
-
-    .brand-logo {
-        font-size: 2rem;
-    }
-}
    .mobile-header {
     position: fixed;
     top: 0;
@@ -595,7 +569,11 @@ body {
     .bottom-nav {
         display: none;
     }
-
+  .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
     /* Convertir el header en una barra de navegación completa superior */
     .mobile-header {
         height: 80px;
@@ -614,7 +592,7 @@ body {
         margin-right: auto;
     }
 
-    .section-mobile {
+    .section-horarios-mobile {
         padding: 60px 20px;
     }
 
