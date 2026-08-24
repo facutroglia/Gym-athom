@@ -136,12 +136,11 @@ body {
 /* ==========================================================================
    SECCIONES Y COMPONENTES BASE
    ========================================================================== */
-.main-content {
-    margin-top: 20px;
-}
+
 /* HERO */
 .hero-mobile {
     width: 100%; 
+    margin-top: 50px;
     padding: 60px 20px;
     text-align: center;
     box-sizing: border-box;
@@ -326,98 +325,225 @@ body {
 }
 
 /* PLANES */
-.plan-mobile {
-    position: relative;
-    background: var(--bg-card);
-    border-radius: 20px;
-    padding: 25px 20px;
-    border: 1px solid var(--border-color);
-    margin-bottom: 25px;
+.pricing-container {
+display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 0 12px;
+  margin: 0 auto;
 }
 
-.plan-mobile.featured {
-    border: 2px solid var(--yellow-primary);
-    box-shadow: 0 10px 25px var(--yellow-glow);
+.plan-card {
+position: relative;
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 22px 16px; /* Padding ajustado para pantallas chicas */
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.plan-card.featured {
+border: 2px solid var(--yellow-primary);
+  box-shadow: 0 10px 25px var(--yellow-glow);
 }
 
 .badge-promo {
-    position: absolute;
-    top: -12px;
-    right: 20px;
-    background: #10b981;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 800;
-    padding: 4px 10px;
-    border-radius: 12px;
+position: absolute;
+  top: -12px;
+  right: 16px;
+  background: #10b981;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
 }
 
 .plan-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .plan-header h3 {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
+font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .pay-tag {
-    background: rgba(255, 200, 0, 0.15);
-    color: var(--yellow-primary);
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 8px;
+background: rgba(255, 200, 0, 0.15);
+  color: var(--yellow-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
 }
 
 .pay-tag.border {
-    background: transparent;
-    border: 1px solid var(--text-muted);
-    color: var(--text-muted);
+background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-muted);
 }
 
 .plan-price {
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 20px;
 }
 
 .price-val {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    color: #fff;
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
 }
 
 .price-period {
-    color: var(--text-muted);
-    font-size: 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
-.plan-sub {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-bottom: 20px;
+/* Grupos */
+.group-discounts {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+.group-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.group-item i {
+  color: var(--yellow-primary);
+  width: 16px;
+}
+
+.group-item strong {
+  color: #fff;
+}
+
+/* Descuentos Mensuales (Pills Grid) */
+.monthly-discounts {
+  margin-bottom: 20px;
+}
+
+.monthly-discounts h4 {
+  color: var(--yellow-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.discount-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.discount-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 8px 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width:0;
+}
+
+.discount-pill .months {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.discount-pill .months i {
+  color: var(--yellow-primary);
+}
+
+.discount-pill .amount {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Checklist */
 .plan-checklist {
-    list-style: none;
-    margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto; /* Empuja el botón hacia abajo si las cards tienen distinto alto */
 }
 
 .plan-checklist li {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .plan-checklist li i {
-    color: var(--yellow-primary);
+  color: var(--yellow-primary);
+}
+
+/* Botón CTA */
+.btn-app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-app:hover {
+  transform: translateY(-2px);
+}
+
+.btn-yellow {
+  background: var(--yellow-primary);
+  color: #000;
+}
+
+.btn-outline {
+  border: 1px solid var(--text-muted);
+  color: #fff;
+}
+
+.btn-outline:hover {
+  border-color: var(--yellow-primary);
+  color: var(--yellow-primary);
 }
 
 .quick-rates {
@@ -542,7 +668,19 @@ body {
 /* ==========================================================================
    ADAPTACIÓN PARA ESCRITORIO (DESKTOP - PANTALLAS +768px)
    ========================================================================== */
-@media (min-width: 768px) {
+@media (max-width: 340px) {
+  .discount-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .discount-pill {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px 12px;
+  }
+}
+
+   @media (min-width: 768px) {
     
     body {
         padding-bottom: 0; /* Ocultamos espacio de barra inferior */
@@ -583,10 +721,11 @@ body {
         padding: 80px 20px;
         text-align: center;
         max-width:none;
-        margin: 0 auto;
+        margin-bottom: 60px;
     }
 
     .hero-mobile h1 {
+        padding: 0px 20px;
         font-size: 4.2rem;
     }
 
@@ -625,25 +764,38 @@ body {
     }
 
     /* PLANES (DESKTOP: GRILLA LADO A LADO) */
-    #planes {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        align-items: start;
-    }
+    .pricing-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 400px));
+    justify-content: center; /* Centra las dos cards en la pantalla */
+    align-items: stretch;
+    gap: 25px;
+    max-width: 900px;
+  }
 
-    #planes .section-title {
-        grid-column: 1 / -1;
-    }
+  .plan-card {
+    padding: 28px 24px;
+  }
 
-    .plan-mobile {
-        margin-bottom: 0;
-    }
+  .price-val {
+    font-size: 2.8rem;
+  }
 
-    .quick-rates {
-        grid-column: 1 / -1;
-        margin-top: 10px;
-    }
+  .discount-grid {
+    gap: 8px;
+  }
+
+  .discount-pill {
+    padding: 8px 4px;
+  }
+
+  .discount-pill .months {
+    font-size: 0.72rem;
+  }
+
+  .discount-pill .amount {
+    font-size: 0.85rem;
+  }
 
     /* CONTACTO Y MAPA (DESKTOP: 2 COLUMNAS) */
     #contacto {
